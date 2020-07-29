@@ -1,0 +1,1 @@
+## The steps for solving a cube with CFOP

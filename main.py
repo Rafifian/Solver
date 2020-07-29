@@ -1,0 +1,1 @@
+## Generates a list of moves to make in order to solve the Rubik's Cube from a given scramble.

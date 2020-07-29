@@ -1,0 +1,1 @@
+## Python representation of the current state of a Rubik's Cube
