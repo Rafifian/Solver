@@ -1,8 +1,8 @@
 ### Generates a list of moves to make in order to solve the Rubik's Cube from a given scramble.
 
 ## Imports
-from .solve import *
-from .cube import *
+from solve import cfop
+from cube import representation, turns
 from copy import copy
 from math import inf
 
