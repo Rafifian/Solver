@@ -1,6 +1,5 @@
 from .scramble import Scramble
 
-valid_chars = ['R', 'L', 'F', 'B', 'D', 'U']
 
 class ScrambleParse:
     # Initializes a scramble parser, which splits lists of scrambles and returns them as a list of strings.
