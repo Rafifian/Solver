@@ -3,7 +3,7 @@ from copy import copy
 single_turns = ['R', 'L', 'F', 'B', 'D', 'U']
 valid_turns =  single_turns + [i.lower() for i in single_turns]
 valid_rot = ['x', 'y', 'z']
-valid_mod = ["'", '2', 'w']
+valid_mod = ["'", '2']
 valid_chars = valid_turns + valid_rot + valid_mod + [' ']
 
 class Scramble:
