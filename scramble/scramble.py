@@ -12,15 +12,18 @@ class Scramble:
     # @param index The scramble number of the given set.
     def __init__(self, scramble, index):
         self.s = scramble
+        print('s = ' + '<' + self.s + '>')
         self.index = index
         self.invalid_chars = []
         self.valid = self.is_valid()
 
-
-    # Returns a str of all of this Scramble object's important features
+    # Returns a str of this Scramble object.
     def __str__(self):
-        return f'<Scramble: {self.index} "{self.s}" {self.is_valid}>'
+        return self.s
 
+    # Returns a detailed str of this Scramble object's important features.
+    def __repr__(self):
+        return f'<Scramble: {self.index} "{self.s}" {self.valid}>'
 
     # Checks if the scramble is valid. Returns true if it is, and raises errors if not.
     def is_valid(self):
@@ -37,31 +40,12 @@ class Scramble:
             raise AssertionError(f'Scramble invalid. "{i}" are not valid characters.')
         
         return all_correct
-
-
-    # Changes the index of this Scramble object.
-    def set_index(self, index):
-        self.index = index
     
-
     # Changes the scramble str in this Scramble object, then checks if it is valid.
     def set_scramble(self, scramble):
         self.s = scramble
         self.is_valid()
 
-    # Gets the validity of this Scramble object.
-    def get_valid(self):
-        return self.valid
-    
-    # Gets the index of this Scramble object.
-    def get_index(self):
-        return self.index
-
-    # Gets the scramble str in this Scramble object.
-    def get_scramble(self):
-        return self.s
-
 
 # # Debugging
 # if __name__ == "__main__":
-#     pass
