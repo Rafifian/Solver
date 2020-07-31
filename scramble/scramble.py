@@ -38,6 +38,26 @@ class Scramble:
             i = ', '.join(self.s)
             raise AssertionError(f'Scramble invalid. "{i}" are not valid characters.')
         
+        # Checks for hanging modifiers and combined turns.
+        mod_check = self.s.split(' ')
+        for i in mod_check:
+            # Hanging modifiers
+            if i in valid_mod:
+                all_correct = False
+                raise AssertionError(f'Scramble invalid. "{i}" is a hanging modifier.')
+
+            # Combined turns
+            if len(i) > 2:
+                all_correct = False
+                raise AssertionError(f'Scramble invalid. "{i}" is an invalid string.')
+            elif len(i) == 2:
+                if i[1] not in valid_mod:
+                    all_correct = False
+                    raise AssertionError(f'Scramble invalid. The second character in "{i}" must be a valid modifier.')
+                if i[0] not in (valid_rot + valid_turns):
+                    all_correct = False
+                    raise AssertionError(f'Scramble invalid. The first character in "{i}" must be a valid rotation or face turn.')
+
         return all_correct
     
     # Changes the scramble str in this Scramble object, then checks if it is valid.
