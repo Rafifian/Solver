@@ -24,16 +24,11 @@ class ScrambleParse:
             list_out.append(Scramble(i.strip(), index))
             index += 1
         return list_out
-
-    # Uses the parsed scramble to
-    def parse_to_turns(self):
-        pass
-
+    
+    # Returns the scramble at the given index.
     def get_scramble(self, index):
         return self.scrambles[index]
 
 # Debugging
 if __name__ == "__main__":
-    x = ScrambleParse("     R F U' x / R F  ")
-    print(x)
-    print(x.get_scramble(0))
+    pass
