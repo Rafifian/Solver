@@ -19,22 +19,21 @@ class ScrambleParse:
             raise TypeError(f'unparsed must be a str. Given: {unparsed} of type {type(unparsed)}')
         s = unparsed.split('/')
         index = 0
+        list_out = []
         for i in s:
-            i = Scramble(i.strip(), index)
-            print(i)
+            list_out.append(Scramble(i.strip(), index))
             index += 1
-        return s
+        return list_out
 
-    def get_unparsed(self):
-        return self.unparsed
+    # Uses the parsed scramble to
+    def parse_to_turns(self):
+        pass
 
-    def get_scrambles(self):
-        return self.scrambles
-    
-    def get_numScrambles(self):
-        return self.numScrambles
+    def get_scramble(self, index):
+        return self.scrambles[index]
 
 # Debugging
 if __name__ == "__main__":
     x = ScrambleParse("     R F U' x / R F  ")
-    print(x.get_scrambles())
+    print(x)
+    print(x.get_scramble(0))
