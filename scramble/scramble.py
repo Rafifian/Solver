@@ -1,7 +1,7 @@
 from copy import copy
 
 single_turns = ['R', 'L', 'F', 'B', 'D', 'U']
-valid_turns =  single_turns + (i.lower() for i in single_turns)
+valid_turns =  single_turns + [i.lower() for i in single_turns]
 valid_rot = ['x', 'y', 'z']
 valid_mod = ["'", '2', 'w']
 valid_chars = valid_turns + valid_rot + valid_mod + [' ']
@@ -12,20 +12,20 @@ class Scramble:
     # @param index The scramble number of the given set.
     def __init__(self, scramble, index):
         self.s = scramble
-        self.valid = self.is_valid()
         self.index = index
         self.invalid_chars = []
+        self.valid = self.is_valid()
 
 
     # Returns a str of all of this Scramble object's important features
     def __str__(self):
-        return f'<Scramble: {self.index} {self.s} {self.is_valid}>'
+        return f'<Scramble: {self.index} "{self.s}" {self.is_valid}>'
 
 
     # Checks if the scramble is valid. Returns true if it is, and raises errors if not.
     def is_valid(self):
         all_correct = True
-        for i in self.s.split(''):
+        for i in self.s:
             if i not in valid_chars:
                 all_correct = False
                 self.invalid_chars.append(i)
@@ -60,3 +60,8 @@ class Scramble:
     # Gets the scramble str in this Scramble object.
     def get_scramble(self):
         return self.s
+
+
+# # Debugging
+# if __name__ == "__main__":
+#     pass
