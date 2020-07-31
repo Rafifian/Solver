@@ -12,7 +12,6 @@ class Scramble:
     # @param index The scramble number of the given set.
     def __init__(self, scramble, index):
         self.s = scramble
-        print('s = ' + '<' + self.s + '>')
         self.index = index
         self.invalid_chars = []
         self.valid = self.is_valid()
