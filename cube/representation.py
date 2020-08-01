@@ -109,3 +109,7 @@ class Cube:
 
     def zRot(self):
         pass
+
+# Debugging
+if __name__ == "__main__":
+    pass

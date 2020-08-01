@@ -66,5 +66,6 @@ class Scramble:
         self.is_valid()
 
 
-# # Debugging
-# if __name__ == "__main__":
+# Debugging
+if __name__ == "__main__":
+    pass

@@ -102,6 +102,6 @@ class Solve():
         elif method == 1:
             CFOP(cube)
 
-## Debugging
+# Debugging
 if __name__ == "__main__":
-    x = Solve("  R2 U' ")
+    pass

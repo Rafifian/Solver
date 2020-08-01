@@ -10,3 +10,7 @@ class CFOP:
     def solve(self):
         cube = self.cube
         solution = self.solution
+
+# Debugging
+if __name__ == "__main__":
+    pass
